@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Memory Match</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section id="menu">
+    <h1>Memory Match</h1>
+    <p>Flip two cards at a time and find every pair in as few moves as you can.</p>
+    <h2>Game</h2>
+    <div class="choices" id="modes">
+      <button data-mode="emoji" aria-pressed="true">Emoji match</button>
+      <button data-mode="flags" aria-pressed="false">Flag match</button>
+    </div>
+    <h2>Grid size</h2>
+    <div class="choices" id="sizes">
+      <button data-size="4x3" aria-pressed="false">4 x 3 (easy)</button>
+      <button data-size="4x4" aria-pressed="true">4 x 4 (medium)</button>
+      <button data-size="6x6" aria-pressed="false">6 x 6 (hard)</button>
+    </div>
+    <button id="start" class="primary">Start game</button>
+    <p class="note" id="menu-best"></p>
+  </section>
+
+  <section id="game" hidden>
+    <div class="bar">
+      <span>Moves <b id="moves">0</b></span>
+      <span>Time <b id="time">0:00</b></span>
+    </div>
+    <div id="board" class="board"></div>
+    <div class="actions">
+      <button id="restart">Restart</button>
+      <button id="home">Change game</button>
+    </div>
+    <p class="note" id="hint"></p>
+  </section>
+
+  <div id="win" class="win" hidden>
+    <div class="win-box">
+      <h2>All pairs found</h2>
+      <p id="win-text"></p>
+      <button id="again" class="primary">Play again</button>
+      <button id="share">Share on WhatsApp</button>
+      <button id="win-home">Change game</button>
+    </div>
+  </div>
+</main>
+<script src="game.js"></script>
+<script data-goatcounter="https://gedeonsang.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
